@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="styleCalculator.css" />
+</head>
+<body>
+	<div class="container">
+		<div id="calc">
+			<h1>CALCULATOR</h1>
+			<div class="inner">
+				<form action="DisplayCalculator" method=POST>
+					<div class="display" contenteditable="true">
+						<input class="text" id="text" type="text" name="expression"
+							value="" placeholder="enter expression" />
+					</div>
+					<br> <br>
+
+					<div class="keys">
+
+						<input type="button" value="C" class="button" onClick="remove()"></input>
+
+						<input type="button" value="<-" class="button"
+							onClick="backspace()"></input> <input type="button" value="("
+							class="operator" onClick="insert('(')"></input> <input
+							type="button" value=")" class="operator" onClick="insert(')')"></input>
+
+						<input type="button" value="7" class="button"
+							onClick="insert('7')"></input> <input type="button" value="8"
+							class="button " onClick="insert('8')"></input> <input
+							type="button" value="9" class="button" onClick="insert('9')"></input>
+						<input type="button" value="/" class="operator"
+							onClick="insert('/')"></input> <input type="button" value="4"
+							class="button" onClick="insert('4')"></input> <input
+							type="button" value="5" class="button" onClick="insert('5')"></input>
+						<input type="button" value="6" class="button"
+							onClick="insert('6')"></input> <input type="button" value="*"
+							class="operator" onClick="insert('*')"></input> <input
+							type="button" value="1" class="button" onClick="insert('1')"></input>
+						<input type="button" value="2" class="button"
+							onClick="insert('2')"></input> <input type="button" value="3"
+							class="button" onClick="insert('3')"></input> <input
+							type="button" value="-" class="operator" onClick="insert('-')"></input>
+						<input type="button" value="0" class="button" onClick="insert('0')"></input>
+						<input type="button" value="." class="button" onClick="insert('.')"></input> 
+						<input type="submit" class="button equal-sign" value="="
+							name="press click" />
+						<input type="button" value="+" class="operator" onClick="insert('+')"></input>
+
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="handle.js"></script>
+</html>
